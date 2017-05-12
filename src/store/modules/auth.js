@@ -65,7 +65,7 @@ const mutations = {
     state.user = defaultState;
     state.error = error;
   },
-}
+};
 
 export default {
   defaultState,

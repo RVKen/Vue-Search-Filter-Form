@@ -4,8 +4,8 @@
 import Vue from 'vue';
 
 const API_URL = 'http://127.0.0.1:8090/';
-const LOGIN_URL = API_URL + 'login';
-const LOGOUT_URL = API_URL + 'logout';
+const LOGIN_URL = `${API_URL}login`;
+const LOGOUT_URL = `${API_URL}logout`;
 
 export default {
   login(credentials, successCb, errorCb) {
