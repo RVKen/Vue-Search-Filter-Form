@@ -41,6 +41,10 @@ module.exports = {
         loader: ['style', 'css', 'stylus']
       },
       {
+        test: /\.less/,
+        loader: "less-loader"
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
