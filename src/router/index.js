@@ -1,13 +1,23 @@
 import Vue from 'vue';
-import Router from 'vue-router';
-import LoginPageComponent from '@/components/LoginPageComponent';
+import VueRouter from 'vue-router';
+import App from '../components/pages/App';
+import LoginPageComponent from '../components/organisms/LoginPageComponent';
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
-  routes: [{
-    path: '/',
-    name: 'LoginPageComponent',
-    component: LoginPageComponent,
-  }],
+export default new VueRouter({
+  routes: [
+    {
+      path: '',
+      name: 'App',
+      component: App,
+      children: [
+        {
+          path: 'login',
+          name: 'LoginPageComponent',
+          component: LoginPageComponent,
+        },
+      ],
+    },
+  ],
 });

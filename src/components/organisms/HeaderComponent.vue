@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import LogoComponent from './LogoComponent';
-  import TagLineComponent from './TagLineComponent';
+  import LogoComponent from '../atoms/LogoComponent';
+  import TagLineComponent from '../atoms/TagLineComponent';
 
   export default {
     components: {
@@ -25,5 +25,6 @@
   div {
     display: block;
     position: relative;
+    height: 120px;
   }
 </style>
