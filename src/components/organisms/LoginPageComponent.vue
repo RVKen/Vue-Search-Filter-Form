@@ -1,4 +1,5 @@
 <template>
+  <h1>Login Form</h1>
 </template>
 
 <script>
@@ -6,7 +7,7 @@
 export default {
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      msg: 'test message',
     };
   },
 };
