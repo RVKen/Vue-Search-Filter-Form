@@ -1,7 +1,7 @@
 <template>
   <main-template>
     <section>
-      <div style="background: #f09090">
+      <div style="background: transparent;">
         <router-view></router-view>
       </div>
     </section>

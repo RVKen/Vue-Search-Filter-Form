@@ -3,8 +3,7 @@
     <div class="layout-row layout-row-content">
       <header-component></header-component>
       <!--<slot name="header"></slot>-->
-
-      <v-content>
+      <v-content class="login-form">
         <v-container fluid>
           <v-row>
             <v-col md12>
@@ -56,6 +55,9 @@ export default {
       height: 100%;
       overflow: visible;
     }
+  }
+  .login-form {
+    background: transparent;
   }
 
 </style>
