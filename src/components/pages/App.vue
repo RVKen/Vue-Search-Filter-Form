@@ -5,7 +5,7 @@
         <router-view></router-view>
       </div>
     </section>
-    <div slot="footer">© 2017 East View Information Services</div>
+    <div slot="footer">© 2016 East View Information Services</div>
   </main-template>
 </template>
 

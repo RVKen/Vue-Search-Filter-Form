@@ -3,15 +3,13 @@
     <div class="layout-row layout-row-content">
       <header-component></header-component>
       <!--<slot name="header"></slot>-->
-      <v-content class="login-form">
-        <v-container fluid>
-          <v-row>
-            <v-col md12>
+        <v-container fluid class="login-form">
+          <v-layout>
+            <v-flex sx12>
               <slot/>
-            </v-col>
-          </v-row>
+            </v-flex>
+          </v-layout>
         </v-container>
-      </v-content>
     </div>
     <v-footer class="layout-row"><slot name="footer"></slot></v-footer>
   </div>
