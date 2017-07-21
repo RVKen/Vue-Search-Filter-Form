@@ -16,8 +16,8 @@
             <v-layout row wrap>
                 <v-flex
                 lg3 md3 sm4 xs12
-                v-for="n in 4"
-                :key="n"
+                v-for="(x, key) in checkList"
+                :key="key"
                 >
                 <v-card flat tile>
                     <v-card-media
@@ -26,6 +26,7 @@
                     >
                     <v-layout fill-height text-xs-center>
                         <v-flex xs12 align-end flexbox>
+                            <v-checkbox v-model="x.checked" color="white" class="pic-check"></v-checkbox>
                             <div full-width class="title-container">
                             </div>
                             <span class="title-text title" >Lorem Text</span>
@@ -43,7 +44,24 @@
 export default {
   data() {
     return {
-
+      checkList: [
+        {
+          id: 1,
+          checked: true,
+        },
+        {
+          id: 2,
+          checked: false,
+        },
+        {
+          id: 3,
+          checked: true,
+        },
+        {
+          id: 4,
+          checked: false,
+        },
+      ],
     };
   },
   methods: {
@@ -58,7 +76,12 @@ export default {
 	height: 60px;
 	overflow: hidden;
 }
-
+.pic-check {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    color: white;
+}
 .sb-search-input {
 	border: 1px #eaeaea solid;
 	outline: none;
@@ -72,12 +95,18 @@ export default {
 	color: #2c3e50;
     width: calc(100% - 68px)
 }
+.sb-search-input:focus {
+    border-color: #e2202c;
+}
+.sb-search-input:hover {
+    border-color: #e2202c;
+}
 .search-btn{
     width: 64px;
     height: 64px;
     border: 1px #e2202c solid;
     background-color: #e2202c;
-    left: -3px;
+    left: -4px;
     border-radius: 0px;
 }
 .title-container {
