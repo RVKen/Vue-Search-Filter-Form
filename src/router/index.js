@@ -19,7 +19,7 @@ export default new VueRouter({
           component: LoginPageComponent,
         },
         {
-          path: 'search',
+          path: '',
           name: 'SearchPageComponent',
           component: SearchPageComponent,
         },
