@@ -6,17 +6,16 @@
             v-if="showDatePicker"
             lazy
             :close-on-content-click="true"
-            v-model="menu"
             transition="scale-transition"
             :nudge-left="0"
             :nudge-bottom="30"
             min-width="290px"
             style="vertical-align: baseline;"
             class="px-3" >
-            <v-date-picker v-model="e3" scrollable></v-date-picker>
+            <v-date-picker v-model="selectedDate" scrollable></v-date-picker>
             <v-text-field
               slot="activator"
-              v-model="e3"
+              v-model="selectedDate"
               placeholder="YYYY-MM-DD"
               append-icon="event"
               readonly
@@ -58,8 +57,7 @@ export default {
     return {
       collapse: false,
       filterOption: 'All years',
-      e3: null,
-      menu: false,
+      selectedDate: null,
       showDatePicker: false,
     };
   },
