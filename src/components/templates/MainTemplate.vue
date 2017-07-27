@@ -3,7 +3,7 @@
     <div class="layout-row layout-row-content">
       <header-component></header-component>
       <!--<slot name="header"></slot>-->
-        <v-container fluid class="login-form">
+        <v-container class="login-form">
           <v-layout>
             <v-flex sx12>
               <slot/>
