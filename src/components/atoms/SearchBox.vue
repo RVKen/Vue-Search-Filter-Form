@@ -3,14 +3,13 @@
         <form width="100%">
             <input class="sb-search-input" placeholder="where is?" type="search" value="" name="search" id="search">
             <v-btn width="64px" icon class="pa-0 ma-0 search-btn">
-                <v-icon>search</v-icon>
+                <v-icon class="white--text">search</v-icon>
             </v-btn>
         </form>
     </div>
 </template>
 <<script>
 export default {
-  name: 'search-box',
   data() {
     return {};
   },
@@ -50,5 +49,6 @@ export default {
     background-color: #e2202c;
     left: -4px;
     border-radius: 0px;
+    color: white;
 }
 </style>

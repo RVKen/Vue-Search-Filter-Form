@@ -31,11 +31,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-  @import "../../assets/styles/global-styles.less";
-</style>
 
 <style scoped lang="less">
+  @import "../../assets/styles/global-styles.less";
   .main-template-wrapper {
     font-family: 'Open Sans', Arial, sans-serif;
     margin: 0;
