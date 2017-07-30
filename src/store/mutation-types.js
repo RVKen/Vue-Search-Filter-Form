@@ -9,3 +9,5 @@ export const errors = {
   CONNECTION_ERROR: 'CONNECTION_ERROR',
   ACCOUNT_EXPIRED: 'ACCOUNT_EXPIRED',
 };
+export const SET_FILTER = 'SET_FILTER';
+export const SET_DATE = 'SET_DATE';

@@ -3,14 +3,12 @@
 import Vue from 'vue';
 import VueResource from 'vue-resource';
 import Vuetify from 'vuetify';
-import Moment from 'vue-moment';
 import router from './router';
 import store from './store';
 
 Vue.config.productionTip = false;
 Vue.use(VueResource);
 Vue.use(Vuetify);
-Vue.use(Moment);
 
 /* eslint-disable no-new */
 new Vue({

@@ -1,21 +1,19 @@
 <template>
     <v-layout row wrap>
         <v-flex
-        lg3 md3 sm4 xs12
-        v-for="(x, key) in checkList"
+        v-for="(item, key) in checkList"
         :key="key"
         >
-            <v-card flat tile>
-                <v-card-media
-                    :src="`https://unsplash.it/300/150?image=${Math.floor(Math.random() * 100) + 1}`"
-                    height="150px" >
-                    <v-layout fill-height text-xs-center>
-                    <v-flex xs12 align-end flexbox>
-                        <v-checkbox v-model="x.checked" color="white" class="pic-check"></v-checkbox>
-                        <div full-width class="title-container">
-                        </div>
-                        <span class="title-text title" >Lorem Text</span>
-                    </v-flex>
+            <v-card tile height="100" class="card--style">
+                <v-card-media :src="`http://via.placeholder.com/140x100`" height="100" style="max-width: 140px;">
+                    <v-layout text-xs-center>
+                        <v-flex>
+                            <v-checkbox v-model="item.checked" color="white" class="pic-check"></v-checkbox>
+                            <div full-width class="title-container px-3 py-1">
+                                <span class="white--text" >{{item.title}}</span>
+                            </div>
+                            
+                        </v-flex>
                     </v-layout>
                 </v-card-media>
             </v-card>
@@ -29,19 +27,18 @@ export default {
       checkList: [
         {
           id: 1,
+          title: 'Periodicals',
           checked: true,
         },
         {
           id: 2,
+          title: 'e-Books',
           checked: false,
         },
         {
           id: 3,
+          title: 'World News Conections',
           checked: true,
-        },
-        {
-          id: 4,
-          checked: false,
         },
       ],
     };
@@ -49,23 +46,21 @@ export default {
 };
 </script>
 <style>
+.card--style {
+    margin: 0 auto;
+    max-width: 140px;
+}
 .pic-check {
     position: absolute;
-    left: 5%;
-    top: 5%;
+    left: 1%;
+    top: 0;
     color: white;
 }
 .title-container {
-    width: 100%;
-    background-color: #000;
-    opacity: .4;
-    height: 4rem
-}
-.title-text {
     position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;    
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    line-height: 16px;
 }
 </style>

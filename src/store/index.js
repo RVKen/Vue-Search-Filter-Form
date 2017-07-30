@@ -8,6 +8,7 @@ import createLogger from 'vuex/dist/logger';
 import * as actions from './actions';
 import * as getters from './getters';
 import auth from './modules/auth';
+import filterOptions from './modules/filterOption';
 
 Vue.use(Vuex);
 
@@ -18,6 +19,7 @@ export default new Vuex.Store({
   getters,
   modules: {
     auth,
+    filterOptions,
   },
   strict: debug,
   plugins: debug ? [createLogger()] : [],

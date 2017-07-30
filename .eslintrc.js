@@ -37,5 +37,6 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'no-param-reassign': ['error', { 'props': false }],
     "no-console":0,
+    'no-shadow': ["error", { "allow": ["state"] }]
   }
 }
