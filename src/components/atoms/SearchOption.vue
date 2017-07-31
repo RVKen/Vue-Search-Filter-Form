@@ -63,15 +63,10 @@ export default {
   data() {
     return {
       collapse: false,
-      filterOption: 'All years',
       selectedDate: null,
-      showDatePicker: false,
     };
   },
   methods: {
-    my() {
-      console.log('aaaa');
-    },
     setOption(optionValue) {
       if (optionValue === 'Exact date') {
         this.$store.dispatch('setFilter', { optionName: optionValue, datePickerVisible: true, selectedDate: this.selectedDate });
