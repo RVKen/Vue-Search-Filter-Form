@@ -1,7 +1,7 @@
 <template>
     <v-layout row wrap px-lg-5>
         <v-flex
-            xs3 xl-2
+            xs6 sm3 md3 xl2
             v-for="(item, key) in checkList"
             :key="key" >
             <v-card tile flat class="card--style">
@@ -51,9 +51,6 @@ export default {
 };
 </script>
 <style>
-.card--style {
-    max-width: 140px;
-}
 .pic-check {
     position: absolute;
     left: 1%;
