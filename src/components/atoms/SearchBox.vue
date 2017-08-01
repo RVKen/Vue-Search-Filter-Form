@@ -1,5 +1,5 @@
 <template>
-    <div class="text-xs-center">
+    <div class="search-box">
         <input class="sb-search-input" placeholder="where is?">
         <v-btn width="60px" icon class="ma-0 search-btn">
             <v-icon class="white--text">search</v-icon>
@@ -16,6 +16,9 @@ export default {
 
 <style scoped lang="less">
 @import '../../assets/styles/theme.less';
+.search-box {
+    position: relative;
+}
 .sb-search-input {
     border: 1px @border-white solid;
 	outline: none;
@@ -24,7 +27,7 @@ export default {
 	padding: 20px 65px 20px 20px;
 	font-size: 20px;
 	color: @input-color;
-    width: calc(100%-10px);
+    width: 100%;
 }
 .sb-search-input:focus {
     border-color: @border-red;
@@ -39,5 +42,7 @@ export default {
     position: absolute;
     border-radius: 0px;
     color: white;
+    top:0;
+    right: 0;
 }
 </style>

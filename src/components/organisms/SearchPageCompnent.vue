@@ -1,6 +1,6 @@
 <template>
     <v-container>
-      <v-layout row wrap class="pa-4">
+      <v-layout row wrap class="py-4">
           <v-flex xs12>
               <SearchBox></SearchBox>
           </v-flex>

@@ -1,7 +1,7 @@
 <template>
     <v-container class="filter">
-        <v-flex v-if="!collapse" >
-          <v-btn class="pl-2 py-2 btn btn--selector" v-on:click="collapse=true">{{currentFilter.optionName}}<v-icon right x-large class="pl-5">expand_more</v-icon></v-btn>
+        <v-flex v-if="!collapse" class="px-0">
+          <v-btn class="pl-2 py-2 mx-0 btn btn--selector" sm6 v-on:click="collapse=true">{{currentFilter.optionName}}<v-icon right x-large class="pl-5">expand_more</v-icon></v-btn>
           <v-menu
             v-if="currentFilter.datePickerVisible"
             lazy
@@ -11,7 +11,8 @@
             :nudge-bottom="30"
             min-width="290px"
             style="vertical-align: baseline;"
-            class="px-3" >
+            class="px-3"
+            sm6 >
             <v-date-picker v-model="selectedDate" scrollable></v-date-picker>
             <v-text-field
               slot="activator"

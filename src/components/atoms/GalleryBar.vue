@@ -1,14 +1,14 @@
 <template>
-    <v-layout row wrap>
+    <v-layout row wrap px-lg-5>
         <v-flex
-        v-for="(item, key) in checkList"
-        :key="key"
-        >
-            <v-card tile height="100" class="card--style">
-                <v-card-media :src="`http://via.placeholder.com/140x100`" height="100" style="max-width: 140px;">
+            xs3 xl-2
+            v-for="(item, key) in checkList"
+            :key="key" >
+            <v-card tile flat class="card--style">
+                <v-card-media :src="`http://via.placeholder.com/140x100`" height="100px">
                     <v-layout text-xs-center>
                         <v-flex>
-                            <v-checkbox v-model="item.checked" color="white" class="pic-check"></v-checkbox>
+                            <v-checkbox v-model="item.checked" color="white" class="pic-check pa-2"></v-checkbox>
                             <div full-width class="title-container px-3 py-1">
                                 <span class="white--text" >{{item.title}}</span>
                             </div>
@@ -27,17 +27,22 @@ export default {
       checkList: [
         {
           id: 1,
-          title: 'Periodicals',
+          title: 'Lorem text',
           checked: true,
         },
         {
           id: 2,
-          title: 'e-Books',
+          title: 'Lorem text',
           checked: false,
         },
         {
           id: 3,
-          title: 'World News Conections',
+          title: 'Lorem text',
+          checked: true,
+        },
+        {
+          id: 3,
+          title: 'Lorem text',
           checked: true,
         },
       ],
@@ -47,7 +52,6 @@ export default {
 </script>
 <style>
 .card--style {
-    margin: 0 auto;
     max-width: 140px;
 }
 .pic-check {
