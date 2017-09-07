@@ -1,34 +1,20 @@
 <template>
   <v-container>
-    <v-content>
-      <v-row class="pa-4">
-        <v-col xs12>
+      <v-layout class="pa-4">
+        <v-flex xs12>
           <h3 class="text-xs-center grey--text text--darkten-1">Login to Cross-Platform Search</h3>
-        </v-col>
-      </v-row>
-      <v-row class="pa-4">
-        <v-col xs6 offset-xs3 v-if="error">
+        </v-flex>
+      </v-layout>
+      <v-layout class="pa-4">
+        <v-flex xs6 offset-xs3 v-if="error">≠
           <h6 class="text-xs-center red--text text--darkten-4">You have entered an invalid username or password</h6>
-        </v-col>
-        <v-col xs4 offset-xs4>
-		  <v-text-field type="text" 
-		         name="user-name" 
-		         label="Username" 
-		         id="user-name"
-		         v-model="credentials.username"
-		         class="aaa"></v-text-field>
-		  <v-text-field
-              name="input-10-1"
-              label="Password"
-              v-model="credentials.password"
-              :append-icon="e1 ? 'visibility' : 'visibility_off'"
-              :append-icon-cb="() => (e1 = !e1)"
-              :type="e1 ? 'password' : 'text'"
-            ></v-text-field>
-		  <v-btn error light large v-on:click.native="login()">Enter</v-btn>
-		</v-col>
-      </v-row>
-    </v-content>
+        </v-flex>
+        <v-flex xs8 offset-xs2>
+          <v-text-field type="text" name="user-name" label="Username" id="user-name" v-model="credentials.username" class="aaa"></v-text-field>
+          <v-text-field name="input-10-1" label="Password" v-model="credentials.password" :append-icon="e1 ? 'visibility' : 'visibility_off'" :append-icon-cb="() => (e1 = !e1)" :type="e1 ? 'password' : 'text'"></v-text-field>
+          <v-btn error light large v-on:click.native="login()">Enter</v-btn>
+        </v-flex>
+      </v-layout>
   </v-container>
 </template>
 
@@ -66,10 +52,11 @@ export default {
 </script>
 
 <style scoped>
-  div {
-  	background: transparent !important;
-  }
-  button {
-    width: 100%;
-  }
+div {
+  background: transparent !important;
+}
+
+button {
+  width: 100%;
+}
 </style>

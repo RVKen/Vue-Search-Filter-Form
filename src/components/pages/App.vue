@@ -1,12 +1,14 @@
 <template>
-  <main-template>
-    <section>
-      <div style="background: transparent;">
-        <router-view></router-view>
-      </div>
-    </section>
-    <div slot="footer">© 2017 East View Information Services</div>
-  </main-template>
+  <v-app>
+    <main-template>
+      <section>
+        <div style="background: transparent;">
+          <router-view></router-view>
+        </div>
+      </section>
+      <div slot="footer">© 2016 East View Information Services</div>
+    </main-template>
+  </v-app>
 </template>
 
 <script>
